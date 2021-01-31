@@ -108,9 +108,14 @@ const Demo = props => {
     <View>
       
       <Image source={{
-        width: '100%',
+        width: '96%',
         uri: 'http://localhost:5678/button.png'
-      }} onClick={() => {
+      }} 
+      style={{
+        position: 'fixed',
+        bottom: '40px'
+      }}
+      onClick={() => {
         upLoadFile()
       }}></Image>
     </View>,
@@ -130,9 +135,9 @@ const Demo = props => {
       contentStyle={{
         padding: '10rpx',
         position: 'absolute',
-        top: '240rpx',
+        top: '230rpx',
         width: '90%',
-        height: '720rpx',
+        height: '730rpx',
 
       }}
     >

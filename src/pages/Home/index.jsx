@@ -2,12 +2,11 @@
 import { createElement, Component, render, useState } from 'rax';
 import View from 'rax-view';
 import Text from 'rax-text';
-
+import Image from 'rax-image';
 import styles from './index.module.css';
 import Logo from '@/components/Logo';
+import Link from 'rax-link';
 
-
-import Demo from '../Modal'
 
 
 
@@ -18,20 +17,34 @@ const renderDemo = () => {
 export default function Home() {
   return (
     <View>
-      <Image source={{
+        <Image source={{
+          uri: 'http://localhost:5678/margin.png'
+        }} style={{
           width: '100%',
-          uri: 'http://localhost:5678/Welcome.gif'
+          marginBottom: '20px'
         }}></Image>
-      <View className={styles.homeContainer}>
-        
-        {/* <Logo uri="//gw.alicdn.com/tfs/TB1MRC_cvb2gK0jSZK9XXaEgFXa-1701-1535.png" /> */}
-        <Demo />
-        {/* <Text type="primary" size="large" onClick={upLoadFile}>【 UpLoad 】</Text>
-        <Text type="primary" size="large" onClick={renderDemo}>【 Demo 】</Text>
-        <Text type="primary" size="large" onClick={startQuery}>【 startQuery 】</Text> */}
+      <Image
+        source={{
+          uri: 'http://localhost:5678/top_home.png'
+        }} style={{
+          width: '70%',
+          position: 'relative',
+          left: '15%'
+        }}></Image>
+
+      <Link
+        href={'/#/core'}
+        miniappHref={'/pages/Core/index'}
+      >
+        <Image source={{
+          uri: 'http://localhost:5678/select.png'
+        }} style={{
+          width: '100%',
+          marginBottom: '20px'
+        }}></Image>
+      </Link>
 
 
-      </View>
 
     </View>
   );

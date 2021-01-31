@@ -23,6 +23,7 @@
     "universal-choose-image": "^1.3.0",
     "universal-file": "^1.1.2",
     "universal-loading": "^1.1.0",
+    "universal-navigate": "^1.2.1",
     "universal-request": "^2.2.0"
   },
   "devDependencies": {

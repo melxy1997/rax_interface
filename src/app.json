@@ -3,6 +3,14 @@
     {
       "path": "/",
       "source": "pages/Home/index"
+    },
+    {
+      "path": "/core",
+      "source": "pages/Core/index"
+    },
+    {
+      "path": "/modal",
+      "source": "pages/Modal/index"
     }
   ],
   "window": {
