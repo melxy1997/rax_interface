@@ -12,17 +12,18 @@
     "lint": "npm run eslint && npm run stylelint"
   },
   "dependencies": {
-    "@alifd/next": "^1.21.16",
-    "antd": "^4.11.2",
     "rax": "^1.1.0",
     "rax-document": "^0.1.0",
-    "rax-image": "^2.0.0",
+    "rax-image": "^2.2.5",
     "rax-link": "^1.0.1",
     "rax-modal": "^1.5.6",
     "rax-text": "^2.0.0",
     "rax-view": "^2.0.0",
+    "universal-alert": "^1.2.1",
     "universal-choose-image": "^1.3.0",
-    "universal-file": "^1.1.2"
+    "universal-file": "^1.1.2",
+    "universal-loading": "^1.1.0",
+    "universal-request": "^2.2.0"
   },
   "devDependencies": {
     "@iceworks/spec": "^1.0.0",
@@ -34,5 +35,6 @@
   "private": true,
   "originTemplate": "@rax-materials/scaffolds-app-js",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/melxy1997/rax_interface.git"
 }
