@@ -31,15 +31,6 @@ export default function Home() {
 
       <Demo />
 
-      <View className={styles.homeContainer}>
-
-        {/* <Logo uri="//gw.alicdn.com/tfs/TB1MRC_cvb2gK0jSZK9XXaEgFXa-1701-1535.png" /> */}
-
-        {/* <Text type="primary" size="large" onClick={upLoadFile}>【 UpLoad 】</Text>
-        <Text type="primary" size="large" onClick={renderDemo}>【 Demo 】</Text>
-        <Text type="primary" size="large" onClick={startQuery}>【 startQuery 】</Text> */}
-      </View>
-
     </View>
   );
 }

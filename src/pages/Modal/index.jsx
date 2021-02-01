@@ -45,7 +45,7 @@ const startQuery = function () {
       flag = response.data.value
 
       if (flag == 1) {
-        Loading.show({ content: '上传完毕，启动推理' });
+        Loading.show({ content: 'AI加载成功，正在推理' });
       }
       else if (flag == 2) {
         // Loading.hide()
@@ -81,11 +81,27 @@ const upLoadFile = function () {
 
   chooseImage(options).then((fp) => {
     console.log("local file obj", fp);
-    File.upload({
-      url: 'http://localhost:5678/upLoad',
-      fileType: 'video',
+    fp.filename = fp.files[0].name
+    request({
+      url: 'http://localhost:5678/multer',
+      method: 'POST',
+      data: fp,
+      dataType: 'json'
+    }).then(response => 
+      {console.log('upload success');
+      startQuery()
+      Loading.show({ content: 'AI启动中...' });
+    })
+      .catch(error => {console.log('upload fail');});
+
+    /*File.upload({
+      url: 'http://localhost:5678/multer',
+      fileType: 'video/mp4',
       fileName: fp.files[0].name,
       filePath: fp.data,
+      formData:{
+        name: 'face'
+      },
       success: res => {
         console.log('upload success');
         startQuery()
@@ -93,7 +109,7 @@ const upLoadFile = function () {
       fail: res => {
         console.log('upload fail');
       },
-    });
+    });*/
   })
 }
 let global_setVisible, global_setGifURI
